@@ -50,6 +50,11 @@ andranno quindi stampati in pagina
 Questo richiederà un minimo di ricerca.
 */
 
+//dichiaro le variabili per gli elementi html 
+const nameEl = document.getElementById('namePassenger')
+const offerigEl = document.getElementById('offering')
+const priceEl = document.getElementById('price')
+console.log(nameEl, offerigEl, priceEl);
 
 
 
