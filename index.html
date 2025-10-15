@@ -9,27 +9,52 @@
 
 <body>
     <main>
-        <form action="">
-            <div class="col">
-                <input type="text" id="name" placeholder="Nome Completo" required>
+        <div class="container">
+            <form action="">
+                <div class="col">
+                    <input type="text" id="name" placeholder="Nome Completo" required>
+                </div>
+                <div class="col">
+                    <input type="number" id="km" placeholder="Km da percorrere" required>
+                </div>
+                <div class="col">
+                    <select id="age-passenger" name="age" required>
+                        <option value="adult">maggiorenne</option>
+                        <option value="under18">under 18</option>
+                        <option value="over65">over 65</option> <!-- Questa opzione è pre-selezionata -->
+                    </select>
+                </div>
+                <button id="calc-button">
+                    Genera
+                </button>
+                <button id="delete-button">
+                    Annulla
+                </button>
+            </form>
+        </div>
+        <div class="container">
+            <h3>DETTAGLIO PASSEGGERI</h3>
+            <div class="raw">
+                <div class="col">
+                    <div class="card">
+                        <h4>NOME PASSEGGERO</h4>
+                        <span id="namePassenger">-</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <h5>Offerta</h5>
+                        <span id="offering">-</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <h5>costo biglietto</h5>
+                        <span id="price">-</span>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-                <input type="number" id="km" placeholder="Km da percorrere" required>
-            </div>
-            <div class="col">
-                <select id="age-passenger" name="age" required>
-                    <option value="adult">maggiorenne</option>
-                    <option value="under18">under 18</option>
-                    <option value="over65">over 65</option> <!-- Questa opzione è pre-selezionata -->
-                </select>
-            </div>
-            <button id="calc-button">
-                Genera
-            </button>
-            <button id="delete-button">
-                Annulla
-            </button>
-        </form>
+        </div>
     </main>
 
 
