@@ -11,16 +11,16 @@
     <main>
         <form action="">
             <div class="col">
-                <input type="text" id="name" placeholder="Nome Completo">
+                <input type="text" id="name" placeholder="Nome Completo" required>
             </div>
             <div class="col">
-                <input type="number" id="km" placeholder="Km da percorrere">
+                <input type="number" id="km" placeholder="Km da percorrere" required>
             </div>
             <div class="col">
-                <select id="age-passenger" name="age">
-                    <option value="age">maggiorenne</option>
-                    <option value="age">under 18</option>
-                    <option value="age">over 65</option> <!-- Questa opzione è pre-selezionata -->
+                <select id="age-passenger" name="age" required>
+                    <option>maggiorenne</option>
+                    <option>under 18</option>
+                    <option>over 65</option> <!-- Questa opzione è pre-selezionata -->
                 </select>
             </div>
             <button id="calc-button">

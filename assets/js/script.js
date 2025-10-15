@@ -12,3 +12,9 @@ const kmField = document.getElementById('km')
 const ageField = document.getElementById('age-passenger')
 console.log(form, nameField, kmField, ageField);
 
+//intercetto l'evento di invio del form
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    console.log(nameField.value, kmField.value, ageField.value);
+})
+
