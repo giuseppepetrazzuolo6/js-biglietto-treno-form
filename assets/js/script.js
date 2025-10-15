@@ -52,9 +52,10 @@ Questo richiederà un minimo di ricerca.
 
 //dichiaro le variabili per gli elementi html 
 const nameEl = document.getElementById('namePassenger')
-const offerigEl = document.getElementById('offering')
+const offeringEl = document.getElementById('offering')
 const priceEl = document.getElementById('price')
-console.log(nameEl, offerigEl, priceEl);
+console.log(nameEl, offeringEl, priceEl);
+
 
 
 
