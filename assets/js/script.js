@@ -16,5 +16,31 @@ console.log(form, nameField, kmField, ageField);
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     console.log(nameField.value, kmField.value, ageField.value);
+    //variabili per il calcolo del biglietto
+    const name = nameField.value
+    const distance = parseFloat(kmField.value);
+    const ageCategory = ageField.value;
+    //prezzo per km
+    const priceKm = 0.21;
+    let standardPrice = distance * priceKm
+    //variabile di appoggio
+    let discount = 0
+    //condizioni in cui applicare lo sconto
+    if (ageCategory === 'under18') {
+        discount = 0.20;
+    } else if (ageCategory === 'over65') {
+        discount = 0.40
+    }
+    //calcolo eventuale sconto
+    let priceDiscount = standardPrice * (1 - discount);
+    //prezzo arrotondato a due decimali
+    let ticketPrice = priceDiscount.toFixed(2)
+    //stampo in console il costo del bilietto
+    console.log(`Ciao ${name}, il prezzo del tuo biglietto è €${ticketPrice}`);
 })
+
+
+
+
+
 
