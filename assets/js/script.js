@@ -47,11 +47,14 @@ form.addEventListener('submit', (event) => {
     let standardPrice = distance * priceKm
     //variabile di appoggio
     let discount = 0
+    let ticketType = 'Biglietto standard'
     //condizioni in cui applicare lo sconto
     if (ageCategory === 'under18') {
         discount = 0.20;
+        ticketType = 'Ridotto under 18'
     } else if (ageCategory === 'over65') {
         discount = 0.40
+        ticketType = 'Ridotto over 65'
     }
     //calcolo eventuale sconto
     let priceDiscount = standardPrice * (1 - discount);
@@ -60,10 +63,11 @@ form.addEventListener('submit', (event) => {
     //stampo in console il costo del bilietto
     console.log(`Ciao ${name}, il prezzo del tuo biglietto è €${ticketPrice}`);
     //assegnazione dei valori agli elementi delle card
-    nameEl.textContent = nameField.value
-    carriageEl.textContent = randomOne
-    unicodeEl.textContent = randomTwo
-    priceEl.textContent = ticketPrice
+    nameEl.innerText = nameField.value
+    offeringEl.innerText = ticketType
+    carriageEl.innerText = randomOne
+    unicodeEl.innerText = randomTwo
+    priceEl.innerText = ticketPrice
 })
 
 
