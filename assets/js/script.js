@@ -25,8 +25,14 @@ console.log(form, nameField, kmField, ageField);
 //dichiaro le variabili per gli elementi nelle cards html 
 const nameEl = document.getElementById('namePassenger')
 const offeringEl = document.getElementById('offering')
+const carriageEl = document.getElementById('carriage')
+const unicodeEl = document.getElementById('unicode')
 const priceEl = document.getElementById('price')
-console.log(nameEl, offeringEl, priceEl);
+console.log(nameEl, offeringEl, carriageEl, unicodeEl, priceEl);
+
+//creo delle variabili due variabili che generano un numero casuale seguendo un range indicato
+const randomOne = Math.floor(Math.random() * 9) + 1;
+const randomTwo = Math.floor(Math.random() * 2000) + 1;
 
 //intercetto l'evento di invio del form
 form.addEventListener('submit', (event) => {
@@ -55,6 +61,8 @@ form.addEventListener('submit', (event) => {
     console.log(`Ciao ${name}, il prezzo del tuo biglietto è €${ticketPrice}`);
     //assegnazione dei valori agli elementi delle card
     nameEl.textContent = nameField.value
+    carriageEl.textContent = randomOne
+    unicodeEl.textContent = randomTwo
     priceEl.textContent = ticketPrice
 })
 
